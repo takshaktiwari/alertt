@@ -1,0 +1,29 @@
+{
+    "name": "takshak/alertt",
+    "keywords": ["laravel", "alert", "notification", "panel", "blade"],
+    "description": "Simple admin panel starter kit",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Takshak Tiwari",
+            "email": "takshaktiwari@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Takshak\\Alertt\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Takshak\\Alertt\\AlerttServiceProvider"
+            ],
+            "aliases": {
+                "Alertt": "Takshak\\Alertt\\Facades\\Alertt"
+            }
+        }
+    }
+}
