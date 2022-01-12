@@ -29,7 +29,9 @@ class AlerttServiceProvider extends ServiceProvider
 
     public function register()
     {
-
+        $this->app->singleton('alertt', function ($app) {
+            return new AlerttService($app['session.store']);
+        });
     }
 
 }

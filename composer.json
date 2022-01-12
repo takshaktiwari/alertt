@@ -1,7 +1,7 @@
 {
     "name": "takshak/alertt",
     "keywords": ["laravel", "alert", "notification", "panel", "blade"],
-    "description": "Simple admin panel starter kit",
+    "description": "Laravel alert",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -11,10 +11,14 @@
             "email": "takshaktiwari@gmail.com"
         }
     ],
+    "require": {},
     "autoload": {
         "psr-4" : {
             "Takshak\\Alertt\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
