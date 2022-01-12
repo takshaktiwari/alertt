@@ -22,11 +22,12 @@ class Alert extends Component
             return false;
         }
         
-        if (config('alertt.footer.status')) {
-            $this->footer = session('alertt-footer');
-            if (!$this->footer) {
-                $this->footer = now()->format('d-M-Y h:i:s a');
-            }
+        $this->footer = session('alertt-footer');
+        if (!$this->footer) {
+            $this->footer = now()->format('d-M-Y h:i:s a');
+        }
+        if (config('alertt') && config('alertt.footer.status') == false) {
+            $this->footer = null;
         }
         
         if (session('alertt-type')) {
@@ -178,6 +179,10 @@ class Alert extends Component
 
     public function render()
     {
+        if (!$this->message) {
+            return false;
+        }
+        
         return view('alertt::components.alert');
     }
 }

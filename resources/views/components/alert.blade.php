@@ -67,6 +67,12 @@
 			line-height: {{ config('alertt.body.line_height') ? config('alertt.body.line_height') : '20px' }};
 			color: #333;
 			font-weight: 500;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		#alertt .alertt-body ul{
+			margin-bottom: 0px;
+			padding-left: 1rem;
 		}
 		#alertt .alertt-footer{
 			font-size: {{ config('alertt.footer.font_size') ? config('alertt.footer.font_size') : '13px' }};
@@ -87,13 +93,12 @@
 				{{ $footer }}
 			</div>
 		@endif
+		<script>
+			setInterval(alerttClose, {{ $timeout }});
+			function alerttClose(){
+				document.getElementById('alertt').remove();
+			}
+		</script>
 	</div>
-
-	<script>
-		setInterval(alerttClose, {{ $timeout }});
-		function alerttClose(){
-			document.getElementById('alertt').remove();
-		}
-	</script>
 </body>
 </html>
