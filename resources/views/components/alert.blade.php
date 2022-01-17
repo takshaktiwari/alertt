@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-</head>
-<body>
-
+<div id="alertt-alert">
 	<style>
 		#alertt { 
 			width: 90%;
@@ -94,11 +86,10 @@
 			</div>
 		@endif
 		<script>
-			setInterval(alerttClose, {{ $timeout }});
+			setTimeout(alerttClose, {{ $timeout }});
 			function alerttClose(){
-				document.getElementById('alertt').remove();
+				document.getElementById('alertt-alert').remove();
 			}
 		</script>
 	</div>
-</body>
-</html>
+</div>
