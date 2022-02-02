@@ -15,11 +15,15 @@ class AlerttServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('alertt', [
             Alert::class,
         ]);
-        # component is laod with '<x-alertt-alert />'
+        # component is loaded with '<x-alertt-alert />'
 
         $this->publishes([
             __DIR__.'/../config/alertt.php' => config_path('alertt.php'),
-        ]);
+        ], 'alertt-config');
+
+        $this->publishes([
+            __DIR__.'/../resources/views/components/alertt.blade.php' => resource_path('views/components/alertt.blade.php'),
+        ], 'alertt-view');
     }   
 
     public function provides()

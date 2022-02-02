@@ -3,25 +3,19 @@
 		#alertt { 
 			width: 90%;
 			background-color: rgba(255, 255, 255, 0.85);
-			max-width: {{ config('alertt.max_width') ? config('alertt.max_width') : '500px' }};
-			min-width: {{ config('alertt.min_width') ? config('alertt.min_width') : '300px' }};
+			max-width: {{ config('alertt.max_width', '500px') }};
+			min-width: {{ config('alertt.min_width', '300px') }};
 		    border: 0px solid #ccc;
-		    border-radius: {{ config('alertt.border_radius') ? config('alertt.border_radius') : '5px' }};
+		    border-radius: {{ config('alertt.border_radius', '5px') }};
 		    box-shadow: 0px 0px 12px 0px #ccc;
 		    font-family: Arial, Helvetica, sans-serif;
 		    border-left: 6px solid #333;
 		    position: fixed;
-
-		    z-index: {{ config('alertt.z_index') ? config('alertt.z_index') : 9999 }};
-		    @if(config('alertt'))
-			    {{ config('alertt.bottom') ? 'bottom: '.config('alertt.bottom').';' : '' }}
-			    {{ config('alertt.right') ? 'right: '.config('alertt.right').';' : '' }}
-			    {{ config('alertt.top') ? 'top: '.config('alertt.top').';' : '' }}
-			    {{ config('alertt.left') ? 'top: '.config('alertt.left').';' : '' }}
-		    @else
-		    	bottom: 25px;
-		    	right: 25px;
-		    @endif
+		    z-index: {{ config('alertt.z_index', 9999) }};
+		    bottom: {{ config('alertt.bottom', '25px') }};
+		    right: {{ config('alertt.right', '25px') }};
+		    top: {{ config('alertt.top', null) }};
+		    left: {{ config('alertt.left', null) }};
 
 		    color: {{ $color }};
 		    border-color: {{ $borderColor }};
@@ -34,7 +28,7 @@
 			padding-top: 0px;
 			padding-bottom: 0px;
 			padding-right: 0px;
-			font-size: {{ config('alertt.header.font_size') ? config('alertt.header.font_size') : '16px' }};
+			font-size: {{ config('alertt.header.font_size', '16px') }};
 			font-weight: 500;
 			display: flex;
 			justify-content: space-between;
@@ -67,7 +61,7 @@
 			padding-left: 1rem;
 		}
 		#alertt .alertt-footer{
-			font-size: {{ config('alertt.footer.font_size') ? config('alertt.footer.font_size') : '13px' }};
+			font-size: {{ config('alertt.footer.font_size', '13px') }};
 		}
 	</style>
 

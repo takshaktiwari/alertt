@@ -3,6 +3,7 @@
 namespace Takshak\Alertt\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\View;
 
 class Alert extends Component
 {
@@ -183,6 +184,6 @@ class Alert extends Component
             return false;
         }
         
-        return view('alertt::components.alert');
+        return View::first(['components.alertt', 'alertt::components.alertt']);
     }
 }
