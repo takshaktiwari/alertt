@@ -29,9 +29,9 @@ To display the alertt box you need to add `<x-alertt-alert />` component in you 
 | info() |  | Display your message in light blue color |
 | danger() | | Displays message in red color |
 | success() | | Displays message in light green color |
-| primary() | | Displays message in light green color |
-| dark() | | Displays message in light green color |
-| warning() | | Displays message in light green color |
+| primary() | | Displays message in blue color |
+| dark() | | Displays message in black color |
+| warning() | | Displays message in yellow color |
 | title() | depends on alert type | Setup the message in header / title section of alert box |
 | footer() | curent timestamp | Setup the message in footer section of alert box |
 | timeout() | 6000 | Duration in miliseconds, how long will it be displayed to screen |
