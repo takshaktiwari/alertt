@@ -60,4 +60,5 @@ You can setup the parameters during redirection without using alertt() or \Alert
 ## Setting default values
 To settup your default header. footer messages, default timeout, positions, will can set it via config file. Or in cany case if you want to change the html / css code you will find the blade file in resources/views/components/alertt.blade.php. 
 First off all publish the configuration file or view file or may be both and try to settup you values.
+
 ***You will able to change position, font size. colors and other stuffs from configuration file.***
