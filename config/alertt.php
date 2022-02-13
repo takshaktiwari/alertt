@@ -1,17 +1,17 @@
 <?php
 
 return [
-	'class'		=>	'',
-	'right'		=>	'25px',
-	'bottom'	=>	'25px',
-	'top'		=>	false,
-	'left'		=>	false,
+	// mody css property from here
+	'class'		=>	'', // extra class to be added on alertt component
+	'right'		=>	'25px', 
+	'bottom'	=>	'25px', 
+	'top'		=>	false, 
+	'left'		=>	false, 
 	'z_index'	=>	99999,
 	'max_width'	=>	'500px',
 	'min_width'	=>	'350px',
 	'border_radius'	=>	'5px',
 
-	'timeout'	=>	6000,
 	'header'	=>	[
 		'font_size'	=>	'16px',
 	],
@@ -24,6 +24,9 @@ return [
 		'status'	=>	true,
 	],
 
+	'timeout'	=>	6000,
+
+	// default message and colors
 	'success'	=>	[
 		'title'	=>	'Operation is successfully done',
 		'name'	=>	'success',
