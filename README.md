@@ -2,7 +2,6 @@
 # Introduction 
 
 This  package has HTML, CSS and some lines of JS and can be used to display notifications / alerts in frontend. This will work without any css frameworks like: Bootstrap, Materialize, etc.
-For install alertt package use followimg command:
 
 # Quick Start
 Use given command to import the package in your project
