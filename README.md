@@ -19,6 +19,10 @@ In via Alertt facade
 You can set the parameters during rediretion as well:
 
     return redirect('any/url')->withInfo('Your notification message goes here');
+    
+    OR
+
+    return to_route('any/url')->withErrors('Your error message goes here');
 
 To display the alertt box you need to add `<x-alertt-alert />` component in you layout or any other blade file where required.
 
